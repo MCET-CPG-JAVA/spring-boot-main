@@ -1,0 +1,26 @@
+# Create the domain part (base DN)
+dn: dc=springframework,dc=org
+objectClass: top
+objectClass: domain
+dc: springframework
+
+# Create the admin user
+dn: cn=admin,dc=springframework,dc=org
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+userPassword: admin
+
+# Create the organizational unit (People)
+dn: ou=people,dc=springframework,dc=org
+objectClass: organizationalUnit
+ou: people
+
+# Create a test user
+dn: uid=john,ou=people,dc=springframework,dc=org
+objectClass: inetOrgPerson
+uid: john
+sn: Doe
+cn: John Doe
+userPassword: password
+
