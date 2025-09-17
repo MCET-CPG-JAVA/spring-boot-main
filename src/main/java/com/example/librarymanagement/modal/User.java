@@ -19,6 +19,9 @@ public class User extends BaseEntity implements UserDetails {
 
 	@Column(nullable = false)
 	private String password;
+	
+	@Column(name = "role_id",nullable = false)
+	private Integer roleId;
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -74,6 +77,15 @@ public class User extends BaseEntity implements UserDetails {
 
 	public User setPassword(String password) {
 		this.password = password;
+		return this;
+	}
+
+	public Integer getRoleId() {
+		return roleId;
+	}
+
+	public User setRoleId(Integer roleId) {
+		this.roleId = roleId;
 		return this;
 	}
 
