@@ -1,10 +1,5 @@
 package com.example.librarymanagement.modal;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -25,7 +20,7 @@ public class Role extends BaseEntity {
 	@Column(name = "role_name")
 	private String role_name;
 
-	@ManyToOne
-	@JoinColumn(name = "department_id")
-	private Department department;
+//	@ManyToOne
+//	@JoinColumn(name = "department_id")
+//	private Department department;
 }
