@@ -1,9 +1,7 @@
 package com.example.librarymanagement.service;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,10 +47,11 @@ public class DepartmentService {
 		Role role = roleRepository.findById(roleId).orElseThrow();
 		Department department = departmentRepository.findById(departmentId).orElseThrow();
 
-		department.getRoles().add(role);
+		// department.getRoles().add(role);
 		departmentRepository.save(department);
 	}
 
-	// Clean up was done by standardizing variable names, removing debugging statements, and improving readability by reducing the number of lines.
+	// Clean up was done by standardizing variable names, removing debugging
+	// statements, and improving readability by reducing the number of lines.
 
 }
