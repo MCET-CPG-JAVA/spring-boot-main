@@ -1,8 +1,5 @@
 package com.example.librarymanagement.modal;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,6 +21,6 @@ public class Department extends BaseEntity {
 	@Column(name = "description")
 	private String description;
 
-	@OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
-	private Set<Role> roles = new HashSet<>();
+//	@OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
+//	private Set<Role> roles = new HashSet<>();
 }
