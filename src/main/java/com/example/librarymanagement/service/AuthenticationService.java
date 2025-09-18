@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.librarymanagement.config.LoginUserDto;
 import com.example.librarymanagement.config.RegisterUserDto;
+import com.example.librarymanagement.modal.Book;
 import com.example.librarymanagement.modal.User;
 import com.example.librarymanagement.repository.UserRepository;
 
@@ -47,5 +48,15 @@ public class AuthenticationService {
 		userRepository.findAll().forEach(users::add);
 
 		return users;
+	}
+
+	public List<User> getAll() {
+		List<User> userList = userRepository.findAll();
+		return userList;
+	}
+
+	public void updateRole(Integer id, Integer roleId) {
+		userRepository.updateRole(id,roleId);
+		
 	}
 }
