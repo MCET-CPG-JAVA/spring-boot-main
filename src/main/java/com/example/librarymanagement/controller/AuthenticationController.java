@@ -56,7 +56,7 @@ public class AuthenticationController {
 
 	@PutMapping("/update")
 	@ResponseStatus(value = HttpStatus.OK)
-	public void updateRole(@PathVariable Integer id, @PathVariable Integer roleId) {
+	public void updateRole(@RequestParam Integer id, @RequestParam Integer roleId) {
 		authenticationService.updateRole(id, roleId);
 	}
 }
