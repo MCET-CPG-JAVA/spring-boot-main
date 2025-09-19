@@ -2,12 +2,14 @@ package com.example.librarymanagement.repository;
 
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import com.example.librarymanagement.modal.User;
-
+@Transactional
 public interface UserRepository extends JpaRepository<User, Integer> {
 	Optional<User> findByEmail(String email);
 
